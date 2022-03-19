@@ -1,5 +1,5 @@
 export const types = {
-    saveMap: '[Map] Save',
+    setDimentions: '[Map] Set dimentions',
+    setGrid: '[Map] Set Grid',
     deleteMap: '[Map] Delete',
-    setDimentions: '[Map] Set dimentions'
 }

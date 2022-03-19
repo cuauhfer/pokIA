@@ -1,11 +1,20 @@
 import { types } from '../types/types';
 
-export const setDimentions = (width, height) => {
+export const setDimentions = (columns, rows) => {
     return {
         type: types.setDimentions,
         payload: {
-            width,
-            height
+            columns,
+            rows
+        }
+    }
+}
+
+export const setGrid = (grid) => {
+    return {
+        type: types.setGrid,
+        payload: {
+            grid
         }
     }
 }

@@ -1,24 +1,23 @@
 import { types } from '../types/types';
 
 const initialMap = {
-    width: 0,
-    height: 0,
-    cells: []
+    columns: 0,
+    rows: 0,
+    grid: []
 }
 
 export const mapReducer = (state = initialMap, action) => {
     switch (action.type) {
-        case types.saveMap:
+        case types.setGrid:
             return {
-                width: action.payload.width,
-                height: action.payload.height,
-                cells: action.payload.cells
+                ...state,
+                grid: action.payload.grid
             }
         case types.setDimentions:
             return {
-                width: action.payload.width,
-                height: action.payload.height,
-                cells: []
+                columns: action.payload.columns,
+                rows: action.payload.rows,
+                grid: []
             }
         case types.deleteMap:
             return initialMap;
